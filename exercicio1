@@ -1,0 +1,9 @@
+// 1. Faça um programa que apresente os números ímpares entre 100 e 200.
+
+public class exercicio1 {
+    static void main() {
+        for (int i = 101; i <= 199; i+=2) {
+            System.out.println(i);
+        }
+    }    
+}
