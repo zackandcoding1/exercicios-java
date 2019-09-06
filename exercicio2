@@ -1,0 +1,24 @@
+/* 2. Faça um programa que, dados dois valores como entrada, informe se o primeiro valor
+é maior, menor ou equivalente ao segundo. */
+
+import java.util.Scanner;
+
+public class exercicio2 {
+    static void main() {
+        Scanner keyboard = new Scanner(System.in); //possibilita valores de entrada no código
+        System.out.print("Digite o primeiro valor: ");
+        int valor1 = keyboard.nextInt(); //cria uma variável de entrada
+        
+        System.out.print("Digite o segundo valor: ");
+        int valor2 = keyboard.nextInt();
+        
+        if (valor1 > valor2) {
+            System.out.println(valor1+" é o maior número");
+        }else if (valor1 < valor2) {
+            System.out.println(valor2+" é o maior número");
+        }else {
+            System.out.println("Os valores são iguais");
+        }
+        
+    }    
+}
