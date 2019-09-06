@@ -1,0 +1,22 @@
+/* 4. Faça um programa que calcula o N! (fatorial de N), sendo o valor inteiro de N
+fornecido pelo usuário. Sabe-se que: N! = 1 * 2 * 3 *... * (N-1) * N; e 0! = 1, por
+definição. */
+
+import java.util.Scanner;
+
+public class exercicio4 {
+    static void main() {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Digite o valor da fatorial: ");
+        int num = keyboard.nextInt();
+        
+        int fat = 1;
+        int i = 2;
+        
+        while(i <= num) {
+            fat = fat*i;
+            i++;
+        }
+        System.out.println("O valor de "+num+"! é igual a: "+fat);
+    }
+}
