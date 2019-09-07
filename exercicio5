@@ -1,0 +1,44 @@
+/* 5. Dois carros percorreram diferentes distâncias em diferentes tempos. Sabendo que a
+velocidade média é a razão entre a distância percorrida e o tempo levado para 
+percorrê-la. Faça um programa que leia as distâncias (km) percorridas e tempo (hora)
+gasto por cada carro, e informe a velocidade média dos dois indicando qual teve
+maior velocidade média (km/h). */
+
+import java.util.Scanner;
+
+public class exercicio5 {
+    static void main() {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Digite a distância percorrida pelo carro 1: ");
+        int distanciaCarro1 = keyboard.nextInt();
+        
+        System.out.print("Digite o tempo gasto (em minutos) pelo carro 1: ");
+        int tempoCarro1 = keyboard.nextInt();
+        
+        System.out.print("Digite a distância percorrida pelo carro 2: ");
+        int distanciaCarro2 = keyboard.nextInt();
+        
+        System.out.print("Digite o tempo gasto (em minutos) pelo carro 2: ");
+        int tempoCarro2 = keyboard.nextInt();
+        
+        float velMedia1 = distanciaCarro1 / minutosParaHoras(tempoCarro1);
+        float velMedia2 = distanciaCarro2 / minutosParaHoras(tempoCarro2);
+        
+        System.out.printf("O carro 1 teve velocidade média de %.2f km/h",velMedia1);
+        System.out.println();
+        System.out.printf("O carro 2 teve velocidade média de %.2f km/h",velMedia2);
+        System.out.println();
+        
+        if(velMedia1 > velMedia2) {
+            System.out.println("O carro 1 foi mais rápido");
+        }else if(velMedia1 < velMedia2) {
+            System.out.println("O carro 2 foi mais rápido");
+        }else if(velMedia1 == velMedia2) {
+            System.out.println("Os dois carros tiveram velocidades médias iguais");
+        }
+    }
+    
+    public static float minutosParaHoras(float tempo) {
+        return tempo/60;
+    }
+}
