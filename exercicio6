@@ -37,7 +37,7 @@ public class exercicio6 {
                     System.out.println(multi(a,b));
                     break;
                 case "5":
-                    System.out.println("Escolha novos valores");
+                    System.out.println("Escolha os novos valores");
                     System.out.print("Primeiro valor: ");
                     a=trocar(a);
                     System.out.print("Segundo valor: ");
@@ -48,7 +48,7 @@ public class exercicio6 {
                     System.out.println("Programa encerrado. :)");
                     break;
                 default:
-                    System.out.println("Operação inválida, escolha o valor da operação desejada (0 a 5)");
+                    System.out.println("Operação inválida, escolha o valor da operação desejada (1 a 6)");
             }
         }while(op != "6");
     }
@@ -59,7 +59,7 @@ public class exercicio6 {
         System.out.println("2 - Subtração");
         System.out.println("3 - Divisão");
         System.out.println("4 - Multiplicação");
-        System.out.println("5 - Novos valores: ");
+        System.out.println("5 - Inserir novos números");
         System.out.println("6 - Sair");
     }
     
