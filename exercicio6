@@ -1,0 +1,88 @@
+/* 6. Faça uma calculadora que após informado dois valores inteiros apresente um menu de
+opções, sendo: 1-Soma; 2-Subtração, 3-Divisão, 4-Multiplicação; 5-Inserir novos
+números; 6-SAIR. O programa deverá apresentar o resultado da operação escolhida
+pelo usuário e em seguida voltar ao menu para uma próxima operação. */
+
+import java.util.Scanner;
+
+public class exercicio6 {
+    static void main() {
+        Scanner keyboard = new Scanner(System.in);
+        
+        System.out.print("Insira o primeiro valor: ");
+        int a = keyboard.nextInt();
+        System.out.print("Insira o segundo valor: ");
+        int b = keyboard.nextInt();
+        
+        menu();
+        String op;
+        
+        do { //Estrutura de repetição para o programa encerrar apenas quando desejado
+            op = keyboard.next();
+            switch(op) {
+                case "1":
+                    System.out.print(a+"+"+b+"= ");
+                    System.out.println(soma(a,b));
+                    break;
+                case "2":
+                    System.out.print(a+"-"+b+"= ");
+                    System.out.println(subtração(a,b));
+                    break;
+                case "3":
+                    System.out.print(a+"/"+b+"= ");
+                    System.out.println(div(a,b));
+                    break;
+                case "4":
+                    System.out.print(a+"*"+b+"= ");
+                    System.out.println(multi(a,b));
+                    break;
+                case "5":
+                    System.out.println("Escolha novos valores");
+                    System.out.print("Primeiro valor: ");
+                    a=trocar(a);
+                    System.out.print("Segundo valor: ");
+                    b=trocar(b);
+                    menu();
+                    break;
+                case "0":
+                    System.out.println("Programa encerrado. :)");
+                    break;
+                default:
+                    System.out.println("Operação inválida, escolha o valor da operação desejada (0 a 5)");
+            }
+        }while(op != "0");
+    }
+    
+    public static void menu() {
+        System.out.println("Escolha uma opção a partir de seu número: ");
+        System.out.println("1 - Soma");
+        System.out.println("2 - Subtração");
+        System.out.println("3 - Divisão");
+        System.out.println("4 - Multiplicação");
+        System.out.println("5 - Novos valores: ");
+        System.out.println("0 - Sair");
+    }
+    
+    //Funções das operações
+    public static int soma(int a, int b) {
+        return a+b;
+    }
+    
+    public static int subtração(int a, int b) {
+        return a-b;
+    }
+    
+    public static double div(double a, double b) {
+       return a/b;
+    }
+    
+    public static int multi(int a, int b) {
+        return a*b;
+    }
+    
+    public static int trocar(int newOp) { //Caso o usuário queira trocar os valores dos números
+        Scanner key = new Scanner(System.in);
+        newOp = key.nextInt();
+        return newOp;
+    }
+}
