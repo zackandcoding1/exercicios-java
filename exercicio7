@@ -1,0 +1,36 @@
+/* 7. Em um campeonato, a idade do jogador indica a categoria em que ele será
+classificado: Infantil A = 5-7 anos; Infantil B = 8-10 anos; Juvenil A = 11-13 anos;
+Juvenil B = 14-17 anos; Adulto = maiores de 18 anos. Faça um programa que a partir
+da idade do jogador, forneça a categoria em que ele será classificado. Após
+informado, o programa deverá voltar automaticamente para uma nova consulta, tendo
+a possibilidade de finalizar a execução caso a idade informada seja 0. */
+
+import java.util.Scanner;
+
+public class exercicio7 {
+    static void main(){
+        Scanner keyboard = new Scanner(System.in);
+        
+        while(true) {
+            System.out.print("Insira a sua idade (0 para encerrar)): ");
+            int idade = keyboard.nextInt();
+            
+            if(idade >= 5 && idade <= 7) {
+                System.out.println("Você foi classificado para a categoria Infantil A");
+            } else if (idade >= 8 && idade <= 10) {
+                System.out.println("Você foi classificado para a categoria Infantil B");
+            } else if (idade >= 11 && idade <= 13)
+                System.out.println("Você foi classificado para a categoria Juvenil A");
+            else if (idade >= 14 && idade <= 17) {
+                System.out.println("Você foi classificado para a categoria Juvenil B");
+            } else if (idade >= 18) {
+                System.out.println("Você foi classificado para a categoria Adulto");
+            } else if(idade == 0) {
+                System.out.println("Programa encerrado.");
+                break;
+            } else if(idade < 5) {
+                System.out.println("Você não tem idade suficiente para nenhuma categoria");
+            }
+        }
+    }
+}
