@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class ListArray {
+    static void main() {
+        ArrayList<String> clientes = new ArrayList<String>();
+        ArrayList<Integer> numeros = new ArrayList<Integer>();
+        
+        numeros.add(1);
+        numeros.add(2);
+        numeros.add(3);
+        
+        clientes.add("João");
+        clientes.add("Rosana");
+        clientes.add("Zé");
+        
+        System.out.println(clientes);
+        System.out.println(numeros.get(0));
+    }
+}
