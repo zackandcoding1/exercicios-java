@@ -1,0 +1,13 @@
+import java.util.Arrays;
+
+public class teste {
+    static void main() {
+        int[] array = {1, 2, 3};
+        int[] arrayB = new int[3];
+        String[] nomes = {"João", "Rosana", "Zé"};
+        
+        String stringNomes = Arrays.toString(nomes); //possibilita exibir o conteúdo do array
+        System.out.println(stringNomes);
+        
+    }
+}
