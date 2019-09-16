@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ex3 {
+    public static void main() {
+        ArrayList<Integer> valores = new ArrayList<Integer>();
+        
+        Scanner keyboard = new Scanner(System.in);
+        int valor;
+        
+        while (true) {
+            System.out.println("Insira um valor(0 para sair): ");
+            valor = keyboard.nextInt();
+            
+            if (valor == 0) {
+                break;
+            }
+            
+            valores.add(valor);
+            System.out.println(valores);
+                       
+        }
+        
+    }
+    
+    static float obterMediaAritmetica(ArrayList<Integer> valores) {
+        return 0;
+    }
+    
+}
