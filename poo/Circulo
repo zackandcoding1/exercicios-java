@@ -1,0 +1,22 @@
+public class Circulo {
+    int diametro;
+    int posX;
+    int posY;
+    String cor;
+    boolean isVisivel;
+    
+    public void main() {
+        Circulo circulo1 = new Circulo(8,12,16);
+        System.out.println(circulo1.dobraDiametro());
+    }
+    
+    Circulo(int d, int x, int y) {
+        diametro = d;
+        posX = x;
+        posY = y;
+    }
+    
+    int dobraDiametro() {
+        return diametro = diametro*2;
+    }
+}
