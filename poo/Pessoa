@@ -1,0 +1,11 @@
+public class Pessoa {
+    int idade;
+    double peso;
+    String ocupacao;
+    
+    public void main() {
+        Pessoa pessoa1 = new Pessoa();
+        pessoa1.idade = 33;
+        System.out.println(pessoa1.idade);
+    }
+}
