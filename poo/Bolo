@@ -1,0 +1,16 @@
+public class Bolo {
+    double diametro;
+    String sabor;
+    double valor;
+    
+    Bolo(double d, String s, double v) {
+        diametro = d;
+        sabor = s;
+        valor = v;
+    }
+    
+    public void main(String[] args) {
+        Bolo bolo1 = new Bolo(9, "chocolate", 12);
+        System.out.println(bolo1);
+    }
+}
