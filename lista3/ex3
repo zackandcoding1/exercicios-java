@@ -1,11 +1,13 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ex3 {
-    public static void main() {
+public class Main {
+    private static Scanner keyboard;
+
+    public static void main(String[] args) {
         ArrayList<Integer> valores = new ArrayList<Integer>();
         
-        Scanner keyboard = new Scanner(System.in);
+        keyboard = new Scanner(System.in);
         int valor;
         
         while (true) {
@@ -18,13 +20,19 @@ public class ex3 {
             
             valores.add(valor);
             System.out.println(valores);
+            System.out.println("Média aritmetica: "+obterMediaAritmetica(valores));
                        
         }
         
     }
     
-    static float obterMediaAritmetica(ArrayList<Integer> valores) {
-        return 0;
+    static double obterMediaAritmetica(ArrayList<Integer> valores) {
+        float total = 0;
+        for(int i = 0; i <= valores.size() - 1; i++) {
+            total+= valores.get(i);
+
+        }
+        return total/valores.size();
     }
     
 }
