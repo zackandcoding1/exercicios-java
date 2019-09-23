@@ -1,0 +1,60 @@
+/* Utilize sobrecarga de método para criar um método de conversão de dia da semana:
+se a entrada for uma String com dia da semana (formatado como “segunda-feira”),
+deve retornar o número entre 1 e 7 correspondente (1 é domingo); se a entrada for
+um número de 1 à 7, deve retornar o dia da semana correspondente. Caso a entrada
+seja inválida, o retorno deve ser -99 (se a entrada for String inválida) ou “Erro” (se a
+entrada for número inválido). */
+
+import java.util.Scanner;
+
+public class ex4 {
+    static void main() {
+        // testing
+        System.out.println(converte("domingo")); // retorna 7
+        System.out.println(converte(4)); // retorna "quinta"
+        System.out.println(converte("a")); // retorna "Erro"
+        System.out.println(converte(8)); // retorna -99
+    }
+    
+    static String converte(int dia) {
+        switch(dia) {
+            case 1:
+                return "segunda";
+            case 2:
+                return "terça";
+            case 3:
+                return "quarta";
+            case 4:
+                return "quinta";
+            case 5:
+                return "sexta";
+            case 6:
+                return "sábado";
+            case 7:
+                return "domingo";
+            default:
+                return "Erro";
+        }
+    }
+    
+    static int converte(String dia) {
+        switch(dia) {
+            case "segunda":
+                return 1;
+            case "terça":
+                return 2;
+            case "quarta":
+                return 3;
+            case "quinta":
+                return 4;
+            case "sexta":
+                return 5;
+            case "sábado":
+                return 6;
+            case "domingo":
+                return 7;
+            default:
+                return -99;
+        }
+    }
+}
