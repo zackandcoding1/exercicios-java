@@ -1,0 +1,36 @@
+/* Faça um programa que peça ao usuário 5 números inteiros e mostre a média
+aritmética deles. Utilize ArrayList para salvar os números. */
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ex3 {
+    private static Scanner keyboard;
+
+    public static void main() {
+        ArrayList<Integer> valores = new ArrayList<Integer>();
+        
+        keyboard = new Scanner(System.in);
+        int valor;
+        
+        while (valores.size()!=5) {
+            System.out.print("Insira um valor: ");
+            valor = keyboard.nextInt();
+            
+            valores.add(valor);
+            if (valores.size()==5) {
+                System.out.println("Valores: "+valores);
+                System.out.println("Média aritmética: "+obterMediaAritmetica(valores));
+            }
+        }
+    }
+    
+    static double obterMediaAritmetica(ArrayList<Integer> valores) {
+        float total = 0;
+        for(int i = 0; i < valores.size(); i++) {
+            total+= valores.get(i);
+        }
+        return total/valores.size();
+    }
+    
+}
