@@ -1,0 +1,36 @@
+/* Utilize sobrecarga de método para criar um método "tamanhoDaLista" que receba
+um Array ou um ArrayList (de inteiros), e que retorne a quantidade de elementos.
+No método main, crie um array e um arrayList e chame o método para ambos. */
+
+import java.util.Arrays;
+import java.util.ArrayList;
+
+public class ex1 {
+    static void main(){
+        int[] Array = new int[]{1,2,3,4,5};
+        ArrayList<Integer> array_List = new ArrayList<Integer>();
+
+        array_List.add(1);
+        array_List.add(2);
+        array_List.add(5);
+
+        System.out.println(tamanhoDaLista(Array));
+        System.out.println(tamanhoDaLista(array_List));
+    }
+
+    public static String tamanhoDaLista(int[] Array){
+        int qtdElementos = 0;
+        for (int i = 0; i < Array.length; i++) {
+            qtdElementos++;
+            }
+        return "Quantidade de elementos na Array: "+qtdElementos;
+    }
+
+    public static String tamanhoDaLista(ArrayList<Integer> array_List) {
+        int qtdElementos = 0;
+        for (int i = 0; i < array_List.size(); i++) {
+            qtdElementos++;
+        }
+        return "Quantidade de elementos na ArrayList: "+qtdElementos;
+    }
+}
