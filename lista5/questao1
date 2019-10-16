@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Funcionario {
+    private String nome;
+    private int idade;
+    private double salario;
+    
+    public void setNome() {
+        this.nome = nome;
+    }
+    
+    public void setIdade() {
+        this.idade = idade;
+    }
+    
+    public void setSalario() {
+        this.salario = salario;
+    }
+    
+    public String getNome(String nome) {
+        return nome;
+    }
+    
+    public int getIdade(int idade) {
+        return idade;
+    }
+    
+    public double getSalario(double salario) {
+        return salario;
+    }
+    
+    public static void main() {
+        Funcionario func1 = new Funcionario();
+        func1.setNome();
+        func1.getNome("Isaac");
+    }
+    
+}
