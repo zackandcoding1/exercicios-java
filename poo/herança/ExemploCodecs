@@ -1,0 +1,51 @@
+interface FFMPEG {
+    void Compress();
+}
+
+abstract class Audio implements FFMPEG {
+    private int bitrate;
+}
+
+class MP3 extends Audio {
+    public void Compress(){}
+}
+
+class WAV extends Audio {
+    public void Compress(){}
+}
+
+class FLAC extends Audio {
+    public void Compress(){}
+}
+
+abstract class Video implements FFMPEG {
+    private int bitrate;
+    private int fps;
+    
+    public void setFPS(int fps) {
+        this.fps = fps;
+    }
+    
+    public int getFPS() {
+        return fps;
+    }
+}
+
+class MP4 extends Video {
+    public void Compress(){}
+}
+
+class AVI extends Video {
+    public void Compress(){}
+}
+
+class MKV extends Video {
+    public void Compress(){}
+}
+
+public class ExemploCodecs {
+    public static void main() {
+        FLAC jesusisking = new FLAC();
+        jesusisking.Compress();
+    }
+}
