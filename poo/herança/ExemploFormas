@@ -1,0 +1,43 @@
+abstract class FormaGeometrica {
+    private int lados;
+    
+    FormaGeometrica(int lados) {
+        this.lados = lados;
+    };
+        
+    public int getLados() {
+        return lados;
+    }
+    
+    abstract void calcularArea();
+}
+
+class Retangulo extends FormaGeometrica {
+    Retangulo() {
+        super(4);
+    }
+    
+    @Override
+    void calcularArea() {
+        System.out.println("b*h");
+    }
+}
+
+class Triangulo extends FormaGeometrica {
+    Triangulo() {
+        super(3);
+    }
+    
+    @Override
+    void calcularArea() {
+        System.out.println("b*h/2");
+    }
+}
+
+public class ExemploFormas{
+    public static void main() {
+        Retangulo r1 = new Retangulo();
+        Triangulo t1 = new Triangulo();
+        System.out.println(r1.getLados());
+    }
+}
