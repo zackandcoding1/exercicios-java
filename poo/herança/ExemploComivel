@@ -1,0 +1,26 @@
+interface Comivel {
+    Boolean comida = true;
+}
+
+abstract class Animal implements Comivel {
+    private int peso;
+}
+
+abstract class Verdura implements Comivel {}
+
+abstract class Fruta implements Comivel {}
+    
+class Frango extends Animal {}
+
+class Peixe extends Animal {}
+
+class Alface extends Verdura {}
+
+class Goiaba extends Fruta {}
+    
+public class ExemploComivel {
+    public static void main() {
+        Frango frango = new Frango();
+        System.out.println(frango.comida);
+    }
+}
