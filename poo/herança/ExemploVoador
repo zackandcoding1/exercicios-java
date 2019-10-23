@@ -1,0 +1,30 @@
+interface Voador {
+    Boolean isVoador = true;
+    
+    Boolean Voando();
+}
+
+class Pato implements Voador {
+    public Boolean Voando() {
+        return false;
+    }
+}
+
+class Aviao implements Voador {
+    public Boolean Voando() {
+        return true;
+    }
+}
+
+class Foguete implements Voador {
+    public Boolean Voando() {
+        return true;
+    }
+}
+
+public class ExemploVoador {
+    public static void main() {
+        Pato donald = new Pato();
+        System.out.println(donald.Voando());
+    }
+}
