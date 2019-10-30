@@ -1,0 +1,14 @@
+public class ContaPoupanca extends Conta implements Rentavel {
+    
+    void sacar(int valor) {
+        saldo-= valor;
+    }
+    
+    public void render() {
+        saldo *= 2;
+    }
+    
+    public void verSaldo() {
+        System.out.println(saldo);
+    }
+}
