@@ -1,0 +1,16 @@
+public class Main {
+    public static void main() {
+        Investidor fulano = new Investidor();
+        
+        ContaPoupanca contaItal = new ContaPoupanca();
+        
+        Sorveteria cairo = new Sorveteria();
+        
+        fulano.adicionaInvestimento(contaItal);
+        fulano.adicionaInvestimento(cairo);
+        
+        fulano.verPatrimonio();
+        fulano.viajaNoTempo();
+        fulano.verPatrimonio();
+    }
+}
