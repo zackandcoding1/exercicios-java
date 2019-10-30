@@ -1,0 +1,15 @@
+public class Sorveteria implements Rentavel {
+    int saldo;
+    
+    public void render() {
+        saldo += 500;
+    }
+    
+    public void verSaldo() {
+        System.out.println(saldo);
+    }
+    
+    public void venderSorvete() {
+        System.out.println("vendeu");
+    }
+}
