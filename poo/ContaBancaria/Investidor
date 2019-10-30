@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+public class Investidor {
+    ArrayList <Rentavel> investimentos;
+    
+    Investidor() {
+        investimentos = new ArrayList<Rentavel>();
+    }
+    
+    void adicionaInvestimento(Rentavel investimento) {
+        this.investimentos.add(investimento);
+    }
+    
+    void verInvestimentos() {
+        System.out.println(this.investimentos);
+    }
+    
+    void viajaNoTempo() {
+        for(Rentavel investimento : this.investimentos) {
+            investimento.render();
+        }
+    }
+    
+    void verPatrimonio() {
+        for(Rentavel investimento : this.investimentos) {
+            investimento.verSaldo();
+        }
+    }
+}
