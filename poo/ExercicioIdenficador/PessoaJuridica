@@ -1,0 +1,10 @@
+public class PessoaJuridica implements IDApresentavel {
+    String cnpj;
+    PessoaJuridica(String cnpj) {
+        this.cnpj = cnpj;
+    }
+    
+    public void apresentaID() {
+        System.out.println(this.cnpj);
+    }
+}
