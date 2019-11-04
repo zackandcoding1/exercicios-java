@@ -1,0 +1,9 @@
+public class Main {
+    public static void main() {
+        IDApresentavel cliente = new PessoaFisica("232");
+        IDApresentavel loja = new PessoaJuridica("abc");
+        
+        cliente.apresentaID();
+        loja.apresentaID();
+    }
+}
