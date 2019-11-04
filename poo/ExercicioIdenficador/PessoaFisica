@@ -1,0 +1,10 @@
+public class PessoaFisica implements IDApresentavel {
+    String cpf;
+    PessoaFisica(String cpf) {
+        this.cpf = cpf;
+    }
+    
+    public void apresentaID() {
+        System.out.println(this.cpf);
+    }
+}
