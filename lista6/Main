@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class Main {
+    static void main() {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Digite 1 para um imóvel novo ou 2 para um imóvel velho: ");
+        int valor = keyboard.nextInt();
+        
+    } 
+}
