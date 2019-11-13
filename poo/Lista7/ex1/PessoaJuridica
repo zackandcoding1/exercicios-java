@@ -1,0 +1,26 @@
+public class PessoaJuridica extends Cliente {
+    private String cnpj;
+    private String nomeFantasia;
+
+    PessoaJuridica(String n, String e, String t, String c, String nf) {
+        super();
+    }
+
+    public String getCnpj() {
+        return this.cnpj;
+    }
+
+    public String getNomeFantasia() {
+        return this.nomeFantasia;
+    }
+
+    public void setNomeFantasia(String n) {
+        this.nomeFantasia = nomeFantasia;
+    }
+
+    public void imprimirDados() {
+        System.out.println(cnpj);
+        System.out.println(nomeFantasia);
+    }
+
+}
