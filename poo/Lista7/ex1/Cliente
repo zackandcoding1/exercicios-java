@@ -1,0 +1,33 @@
+public abstract class Cliente {
+    private String nome;
+    private String endereco;
+    private String telefone;
+
+    Cliente(String n, String e, String t) {
+
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public String getEndereco() {
+        return this.endereco;
+    }
+    
+    public String getTelefone() {
+        return this.telefone;
+    }
+
+    public void setNome(String n) {
+        this.nome = nome;
+    }
+
+    public void setEndereco(String e) {
+        this.endereco = endereco;
+    }
+
+    public void setTelefone(String t) {
+        this.telefone = telefone;
+    }
+}
